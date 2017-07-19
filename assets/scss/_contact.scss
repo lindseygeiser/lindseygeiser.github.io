@@ -17,6 +17,7 @@
     padding: 60px;
     background-color: #eee;
     border-radius: 10px;
+    margin-bottom: 30px;
     label {
         font-weight: $bold;
         color: $off-black;
@@ -46,6 +47,7 @@
         cursor: pointer;
         font-size: 14px;
         text-transform: uppercase;
+        transition: fill .3s ease;
     }
     input[type=submit]:hover {
         background-color: $light-teal;
