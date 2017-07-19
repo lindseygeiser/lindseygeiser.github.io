@@ -1,0 +1,80 @@
+$fourColWidth: 24%;
+$threeColWidth: 32%;
+$twoColWidth: 48%;
+$oneColWidth: 100%;
+
+@mixin gridMarginBottom ($width, $columns) {
+    width: $width;
+    padding-bottom: $width;
+    margin-bottom: calc((100% - (#{$width} * #{$columns})) / #{$columns - 1});
+}
+
+main {
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        li {
+            height: 0;
+            @include gridMarginBottom($fourColWidth, 4);
+            background: $dark-teal;
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            
+            @media screen and (max-width: 1440px) {
+                @include gridMarginBottom($threeColWidth, 3);
+            }
+                
+            @media screen and (max-width: 1044px) {
+                @include gridMarginBottom($twoColWidth, 2);
+            }
+            
+            @media screen and (max-width: 540px) {
+                @include gridMarginBottom($oneColWidth, 1);
+                margin-bottom: 30px;
+            }
+            &:hover {
+                img {
+                    filter: grayscale(0) blur(8px);
+                }
+                a {
+                    opacity: 1;
+                }
+            }
+            img {
+                object-fit: cover;
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                filter: grayscale(100%);
+                transition: filter .3s ease;
+            }
+            a {
+                color: $off-white;
+                text-decoration: none;
+                font-size: 36px;
+                font-weight: $heavy;
+                text-align: center;
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, .3);
+                opacity: 0;
+                transition: opacity .3s ease;
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-shadow: 5px 5px 10px #444;
+                }
+            }
+        }
+    }
+}
