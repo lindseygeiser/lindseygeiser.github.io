@@ -8,5 +8,15 @@ html {
 }
 
 body {
+    height:100%;
 	min-height: 100%;
+    font-family: $sans;
+    background-color: $off-white;
+    display: flex;
+    flex-direction: column;
+}
+
+.sizing {
+    width: 80%;
+    margin: 0 auto;
 }
