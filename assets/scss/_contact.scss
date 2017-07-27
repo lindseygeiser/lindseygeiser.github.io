@@ -10,13 +10,11 @@
         color: $off-black;
         font-size: 18px;
         line-height: 1.25;
+        margin-bottom: 30px;
     }
 }
 
 .container {
-    padding: 60px;
-    background-color: #eee;
-    border-radius: 10px;
     margin-bottom: 30px;
     label {
         font-weight: $bold;
@@ -47,7 +45,7 @@
         cursor: pointer;
         font-size: 14px;
         text-transform: uppercase;
-        transition: fill .3s ease;
+        transition: all .3s ease;
     }
     input[type=submit]:hover {
         background-color: $light-teal;

@@ -48,14 +48,12 @@ header {
                     .active {
                         color: $light-teal;
                     }
-                    .active::before {
-                        color: $off-black;
+                    &:first-child a::before {
+                        content: none;
                     }
                     a::before {
                         content: " // ";
-                    }
-                    &:first-child a::before {
-                        content: none;
+                        color: $off-black;
                     }
                     a:hover {
                         color: $light-teal;
