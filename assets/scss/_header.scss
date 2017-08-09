@@ -29,7 +29,7 @@ header {
                 color: $off-black;
             }
             h2::before {
-                content: " // ";
+                content: "// ";
             }
         }
     nav {
@@ -48,18 +48,16 @@ header {
                     .active {
                         color: $light-teal;
                     }
-                    &:first-child a::before {
-                        content: none;
-                    }
-                    a::before {
+                    a::after {
                         content: " // ";
                         color: $off-black;
+                        cursor: default;
+                    }
+                    a:nth-child(4)::after {
+                        content: none;
                     }
                     a:hover {
                         color: $light-teal;
-                    }
-                    a:hover::before {
-                        color: $off-black;
                     }
                 }
             }
