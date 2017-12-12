@@ -38,3 +38,17 @@ footer {
                 }
             }
         }
+
+        @media screen and (max-width: 1044px) {
+            footer {
+                height: 100px;
+                .sizing {
+                    flex-direction: column;
+                }
+                .social {
+                    position: relative;
+                    top: 0;
+                    margin: 0 auto;
+                }
+            }
+            }

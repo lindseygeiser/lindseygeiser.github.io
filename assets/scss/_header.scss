@@ -10,6 +10,7 @@ header {
     .title {
             flex: 1;
             margin-top: 15px;
+            width: 100%;
             .logo {
                 height: 5.5em;
                 width: 5.5em;
@@ -33,7 +34,7 @@ header {
             }
         }
     nav {
-            align-self: flex-end;
+        align-self: flex-end;
                 li {
                     display: inline-block;
                 }
@@ -60,4 +61,80 @@ header {
                         color: $light-teal;
                     }
                 }
+
+                // RESPONSIVE
+                @media screen and (max-width: 1063px) {
+                    .sizing {
+                        display: block;
+                    }
+                    .title {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-end;
+                        margin-bottom: 10px;
+                        .logo {
+                            height: 4.5em;
+                            flex: 0 1 4.5em;
+                            align-self: flex-end;
+                        }
+                        h1 {
+                            flex: 0 1 370px;
+                        }
+                    }
+                }
+
+                @media screen and (max-width: 1044px) {
+
+                    .title {
+                        .logo {
+                            height: 3em;
+                            flex: 0 1 3em;
+                            align-self: flex-end;
+                        }
+                        h1 {
+                            font-size: 40px;
+                            flex: 0 1 240px;
+                        }
+                        h2 {
+                            font-size: 20px;
+                        }
+                    }
+                    nav {
+                        a {
+                            font-size: 20px;
+                        }
+                    }
+                }
             }
+
+            @media screen and (max-width: 540px) {
+                header {
+                    height: 200px;
+                    .sizing {
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    .title {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        .logo {
+                            align-self: flex-start;
+                            width: 3em;
+                        }
+                        h1 {
+                            flex: 0 2 auto;
+                            width: 214px;
+                        }
+                        h2 {
+                        }
+                    }
+                    nav {
+                        align-self: flex-start;
+                        margin-top: 15px;
+                        li {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
