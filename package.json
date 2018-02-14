@@ -1,15 +1,24 @@
 {
-  "name": "project-name",
-  "version": "1.0.0",
-  "description": "Description here",
-  "main": "gulpfile.js",
-  "author": "your-name",
-  "dependencies": {
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-sass": "^2.3.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3"
-  }
-}
+    "name": "lindseygeiser_portfolio_site",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "sass": "node-sass assets/scss --output assets/css --output-style compressed && postcss --use autoprefixer -d assets/css/ assets/css/*.css",
+      "watch:sass": "watch 'npm run sass' assets/scss/"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/lindseygeiser/lindseygeiser.github.io"
+    },
+    "author": "",
+    "license": "ISC",
+    "homepage": "hhttps://lindseygeiser.github.io/",
+    "dependencies": {
+      "autoprefixer": "^7.2.5",
+      "node-sass": "^4.7.2",
+      "postcss-cli": "^4.1.1",
+      "watch": "^1.0.2"
+    }
+  }  
