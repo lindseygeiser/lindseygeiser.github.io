@@ -1,17 +1,17 @@
 @import "utilities/reset";
-
-@import "config/colors";
-@import "config/fonts";
-@import "config/variables";
-
 @import "utilities/extends";
 @import "utilities/mixins";
+
+@import "config/colors-gray";
+@import "config/fonts";
+@import "config/variables";
 
 @import "global";
 
 @import "header";
 @import "footer";
+
 @import "index";
-@import "project";
 @import "about";
-@import "contact";
+@import "project";
+@import "404";
