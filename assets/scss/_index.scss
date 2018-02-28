@@ -1,0 +1,110 @@
+.homepage-content {
+    display: flex;
+    flex-direction: column;
+    .homepage-content_work, .homepage-content_personal  {
+        padding: 50px;
+        width: 100%;
+        li {
+            text-align: center;
+            position: relative;
+        }
+        a {
+            color: $off-white;
+            font-weight: $heavy;
+            font-size: 36pt;
+            z-index: 1;
+            color: $off-white;
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 5px 5px 10px #444;
+        }
+        img {
+            object-fit: cover;
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    }
+    
+}
+
+.homepage-content_header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px;
+    .homepage-content_header_area {
+        grid-column: span 2;
+    }
+}
+
+.homepage-content_header_social_container {
+    display: flex;
+    justify-content: flex-end;
+    .homepage-content_header_social {
+        .homepage-content_header_social_link {
+            display: inline-block;
+            margin-left: 10px;
+            img {
+                height: 50px;
+                width: auto;
+            }
+        }
+    }
+}
+
+.homepage-content_work {
+    background-color: $light-blue;
+    .homepage-content_work_list {
+        display: grid;
+        height: 800px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .homepage-content_work_link {
+        background-color: $off-white;
+    }
+}
+
+.personal_text_title {
+    margin-bottom: .5em;
+}
+
+.personal_text_subtitle {
+    font-size: 24pt;
+    font-weight: $regular;
+    color: $light-blue;
+}
+
+.homepage-content_personal_list {
+    display: grid;
+    height: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    li {
+        &:first-child {
+            background-color: $off-white;
+            text-align: left;
+        }
+    }
+    .homepage-content_personal_list_link {
+        background-color: $light-blue;
+    }
+}
+
+.text {
+    grid-column: span 2;
+}
