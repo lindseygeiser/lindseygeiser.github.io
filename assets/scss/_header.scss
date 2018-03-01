@@ -1,9 +1,11 @@
 .page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: 0 5px 10px #e4e4e4;
     padding: 20px 50px;
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-end;
+    }
     .page-header_nav {
         .page-header_nav_link {
             display: inline-block;

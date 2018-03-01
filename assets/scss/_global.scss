@@ -24,3 +24,12 @@ a {
     font-weight: $heavy;
     font-size: 36pt;
 }
+
+.header-container, .page-container, .footer-container {
+    @extend %wrapper;
+}
+
+.page-container,{
+    padding-top: 30px; 
+    padding-bottom: 30px;
+}
