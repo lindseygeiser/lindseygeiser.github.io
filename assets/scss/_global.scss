@@ -13,23 +13,3 @@ body {
     font-family: $sans;
     background-color: $off-white;
 }
-
-a {
-    text-decoration: none;
-    color: $light-blue;
-}
-
-.title {
-    color: $light-blue;
-    font-weight: $heavy;
-    font-size: 36pt;
-}
-
-.header-container, .page-container, .footer-container {
-    @extend %wrapper;
-}
-
-.page-container,{
-    padding-top: 30px; 
-    padding-bottom: 30px;
-}
