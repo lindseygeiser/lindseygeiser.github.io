@@ -1,55 +1,69 @@
 .homepage-content {
-    display: flex;
-    flex-direction: column;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;    
+}
 
-    .homepage-content_work,  {
-        padding: 50px;
+.content_projects {
+    margin-bottom: 4em;
+    ul {
         width: 100%;
-        li {
-            text-align: center;
-            position: relative;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        border: 1px solid red;
+    }
+
+    li {
+        flex: 1 1 30%;
+        position: relative;
+        margin-left: 2em;
+
+        height: 400px;
+
+        background: center / cover no-repeat url(../images/projects/dual-credit-connection/dual-cover.jpg);
+        &:first-child {
+            margin-left: 0;
         }
-        a {
-            color: $off-white;
-            font-weight: $heavy;
-            font-size: 36pt;
-            z-index: 1;
-            color: $off-white;
-            display: block;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            left: 0;
-        }
-        span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-shadow: 5px 5px 10px #444;
-        }
+
         img {
             object-fit: cover;
-            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
             height: 100%;
             width: 100%;
-            position: absolute;
+    
+            display: none;
         }
     }
     
 }
 
-.homepage-content_work {
-    .homepage-content_work_list {
-        display: grid;
-        height: 800px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 20px;
+.content_about {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    border: 1px solid purple;
+
+    width: 100%;
+    margin-bottom: 4em;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .about_photo {
+        flex: 1 1;
+        img {
+            display: block;
+            width: 500px;
+            height: auto;
+        }
     }
-    .homepage-content_work_link {
-        background-color: $off-white;
+    
+    .about_copy {
+        flex: 2 2;
+        margin-left: 2em;
     }
 }
