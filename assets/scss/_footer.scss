@@ -1,10 +1,38 @@
 .page-footer {
-    background-color: pink;
-    padding: 20px 0;
+    background-color: $off-white;
+    
 
-    .footer_container {
-        width: 90%;
-        max-width: 1500px;
-        margin: 0 auto; 
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        padding: 10px 30px;
+        position: relative;
+        z-index: 5;
+        
+        @media (max-width: 550px) {
+            padding: 10px 15px; 
+        }
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    ul {
+        display: flex;
+        li {
+            margin-left: 15px;
+        }
+        img {
+            display: block;
+            height: 30px;
+            width: auto;
+            transition: .3s transform ease-in-out;
+            &:hover {
+                transform: scale(1.25);
+            }
+        }
     }
 }
